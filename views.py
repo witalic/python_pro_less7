@@ -1,4 +1,5 @@
 # -*- coding: cp1251 -*-
+from presenter import *
 
 while True:
     choice = input("""1 create
@@ -11,12 +12,16 @@ while True:
         note = create_note()
         notes.append(note)
     if choice == '2':
-        pass
+        list_elements(notes)
     if choice == '3':
-        pass
+        note = get_note(notes)
+        print(note)
     if choice == '4':
-        pass
+        note = get_note(notes)
+        note.update(create_note())
     if choice == '5':
-        pass
+        note = get_note(notes)
+        notes.remove(note)
     if choice == '6':
         break
+    limit_page()
